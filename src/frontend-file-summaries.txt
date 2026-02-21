@@ -1,0 +1,23 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes for the cinematic AI video generation platform with Layout wrapper and theme provider, with fixed route variable naming to avoid conflicts.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component with header navigation, authentication controls, and footer with proper branding and attribution.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page showcasing platform capabilities with hero section, feature grid highlighting six core features, and call-to-action sections.",
+  "frontend/src/pages/CreateProjectPage.tsx": "Project creation form page with inputs for title, concept, duration (30s-15min), style preferences, and target audience with backend integration and properly typed duration options array.",
+  "frontend/src/pages/ProjectsPage.tsx": "Project library page displaying all user projects with filtering by status (all, draft, generating, completed) in a responsive grid layout.",
+  "frontend/src/components/ProjectCard.tsx": "Reusable project card component displaying thumbnail, title, duration, creation date, and status badge with navigation to appropriate project page.",
+  "frontend/src/pages/ScriptEditorPage.tsx": "Page wrapper for script editor with authentication guard and project data fetching.",
+  "frontend/src/components/ScriptEditor.tsx": "Script editor component with AI generation controls for tone, pacing, and narrative structure with save and navigation functionality.",
+  "frontend/src/pages/VoiceoverPage.tsx": "Page wrapper for voiceover configuration with authentication guard and project context.",
+  "frontend/src/components/VoiceoverConfig.tsx": "Voiceover configuration component with voice selection (gender, accent, tone), preview functionality, and generation controls.",
+  "frontend/src/pages/SoundEffectsPage.tsx": "Page wrapper for sound effects library with authentication guard and project context.",
+  "frontend/src/components/SoundEffectsLibrary.tsx": "Sound effects browser with category filters, search functionality, preview players, and multi-selection capability.",
+  "frontend/src/pages/MusicSelectionPage.tsx": "Page wrapper for music library with authentication guard and project context.",
+  "frontend/src/components/MusicLibrary.tsx": "Music library component with mood, genre, and tempo filters, preview players, and single-selection radio group for background music.",
+  "frontend/src/pages/GenerationStatusPage.tsx": "Page wrapper for generation progress with auto-navigation to video player when completed.",
+  "frontend/src/components/GenerationProgress.tsx": "Generation progress component displaying overall progress bar, individual stage indicators, and estimated time remaining.",
+  "frontend/src/pages/VideoPlayerPage.tsx": "Page wrapper for video player with authentication guard and completion status check.",
+  "frontend/src/components/VideoPlayer.tsx": "Video player component with HTML5 video element, metadata display, download and share functionality.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including project CRUD operations with proper caching and invalidation strategies.",
+  "frontend/src/index.css": "Global styles with custom OKLCH color system featuring cinematic deep teal, warm gold, and charcoal gray palette for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom cinematic color palette, Playfair Display serif font for headings, Inter for body text, and custom transition durations."
+}

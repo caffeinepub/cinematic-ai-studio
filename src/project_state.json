@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "AI-powered long-form video generation platform supporting 15-minute cinematic videos with Sora integration, voiceover, script writing, sound effects, and music",
+  "architectural_notes": [
+    "Web-based platform for AI video generation",
+    "Support for 15-minute long-form video output",
+    "Integration with Sora API for video generation",
+    "Multi-modal AI pipeline: script → voiceover → video → audio effects"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cinematic hero banner showing abstract film strips and creative elements in deep teal and gold tones (hero-banner.dim_1920x600.png)\n- Icon representing AI script writing with quill and circuit motif (script-icon.dim_128x128.png)\n- Icon representing professional voiceover with microphone and sound wave design (voiceover-icon.dim_128x128.png)\n- Icon representing sound effects with speaker and audio waveforms (sound-icon.dim_128x128.png)\n- Icon representing music with musical note and equalizer bars (music-icon.dim_128x128.png)\n- Icon representing video generation with play button and film reel (video-icon.dim_128x128.png)\n- Placeholder thumbnail for video projects showing generic cinematic frame (project-thumb.dim_320x180.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-page-that-introduces-the-platform-s-capabilities-sora-powered-video-generation-cinematic-quality-output-up-to-15-minutes-ai-script-writing-professional-voiceover-sound-effects-and-music-integration",
+      "title": "Create a landing page that introduces the platform's capabilities: Sora-powered video generation, cinematic quality output up to 15 minutes, AI script writing, professional voiceover, sound effects, and music integration",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-video-project-creation-workflow-where-users-can-input-their-requirements-video-concept-desired-length-up-to-15-minutes-style-preferences-and-target-audience",
+      "title": "Implement a video project creation workflow where users can input their requirements: video concept, desired length (up to 15 minutes), style preferences, and target audience",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-ai-script-writing-interface-where-users-can-generate-or-refine-video-scripts-with-parameters-for-tone-pacing-and-narrative-structure",
+      "title": "Create an AI script writing interface where users can generate or refine video scripts with parameters for tone, pacing, and narrative structure",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-voiceover-configuration-module-where-users-can-select-voice-characteristics-gender-accent-tone-and-generate-professional-quality-narration-from-the-script",
+      "title": "Build a voiceover configuration module where users can select voice characteristics (gender, accent, tone) and generate professional-quality narration from the script",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sound-effects-library-browser-where-users-can-search-preview-and-select-sound-effects-to-enhance-their-video",
+      "title": "Implement a sound effects library browser where users can search, preview, and select sound effects to enhance their video",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-music-selection-interface-where-users-can-browse-background-music-tracks-by-mood-genre-and-tempo-with-options-to-customize-music-for-their-video-length",
+      "title": "Create a music selection interface where users can browse background music tracks by mood, genre, and tempo, with options to customize music for their video length",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-video-generation-status-dashboard-that-displays-progress-for-sora-based-video-rendering-including-stages-for-script-processing-voiceover-generation-visual-rendering-and-audio-mixing",
+      "title": "Build a video generation status dashboard that displays progress for Sora-based video rendering, including stages for script processing, voiceover generation, visual rendering, and audio mixing",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-video-project-library-where-users-can-view-all-their-created-projects-with-thumbnails-titles-duration-creation-date-and-status-draft-generating-completed",
+      "title": "Implement a video project library where users can view all their created projects with thumbnails, titles, duration, creation date, and status (draft, generating, completed)",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-video-player-and-download-interface-for-completed-videos-showing-the-final-cinematic-output-with-all-integrated-elements-visuals-voiceover-sound-effects-music",
+      "title": "Create a video player and download interface for completed videos, showing the final cinematic output with all integrated elements (visuals, voiceover, sound effects, music)",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-visual-theme-that-conveys-professional-cinematic-quality-with-a-modern-sophisticated-aesthetic-using-a-color-palette-of-deep-teals-warm-golds-and-charcoal-grays-typography-should-use-a-clean-sans-serif-for-ui-elements-paired-with-an-elegant-serif-for-headings-layouts-should-emphasize-spaciousness-and-clarity-with-card-based-designs-and-smooth-animations",
+      "title": "Design a cohesive visual theme that conveys professional cinematic quality with a modern, sophisticated aesthetic using a color palette of deep teals, warm golds, and charcoal grays; typography should use a clean sans-serif for UI elements paired with an elegant serif for headings; layouts should emphasize spaciousness and clarity with card-based designs and smooth animations",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Sora video generation integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Cinematic video creation (15 min duration)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "AI script writing feature",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Quality voiceover generation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Sound effects integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Music generation/integration",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Cinematic AI Studio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

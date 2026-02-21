@@ -1,0 +1,224 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-landing-page-that-introduces-the-platform-s-capabilities-sora-powered-video-generation-cinematic-quality-output-up-to-15-minutes-ai-script-writing-professional-voiceover-sound-effects-and-music-integration",
+      "featureTitle": "Create a landing page that introduces the platform's capabilities: Sora-powered video generation, cinematic quality output up to 15 minutes, AI script writing, professional voiceover, sound effects, and music integration",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-video-project-creation-workflow-where-users-can-input-their-requirements-video-concept-desired-length-up-to-15-minutes-style-preferences-and-target-audience",
+      "featureTitle": "Implement a video project creation workflow where users can input their requirements: video concept, desired length (up to 15 minutes), style preferences, and target audience",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/CreateProjectPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-ai-script-writing-interface-where-users-can-generate-or-refine-video-scripts-with-parameters-for-tone-pacing-and-narrative-structure",
+      "featureTitle": "Create an AI script writing interface where users can generate or refine video scripts with parameters for tone, pacing, and narrative structure",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ScriptEditor.tsx",
+        "frontend/src/pages/ScriptEditorPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-voiceover-configuration-module-where-users-can-select-voice-characteristics-gender-accent-tone-and-generate-professional-quality-narration-from-the-script",
+      "featureTitle": "Build a voiceover configuration module where users can select voice characteristics (gender, accent, tone) and generate professional-quality narration from the script",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VoiceoverConfig.tsx",
+        "frontend/src/pages/VoiceoverPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-sound-effects-library-browser-where-users-can-search-preview-and-select-sound-effects-to-enhance-their-video",
+      "featureTitle": "Implement a sound effects library browser where users can search, preview, and select sound effects to enhance their video",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SoundEffectsLibrary.tsx",
+        "frontend/src/pages/SoundEffectsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-music-selection-interface-where-users-can-browse-background-music-tracks-by-mood-genre-and-tempo-with-options-to-customize-music-for-their-video-length",
+      "featureTitle": "Create a music selection interface where users can browse background music tracks by mood, genre, and tempo, with options to customize music for their video length",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/MusicLibrary.tsx",
+        "frontend/src/pages/MusicSelectionPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-video-generation-status-dashboard-that-displays-progress-for-sora-based-video-rendering-including-stages-for-script-processing-voiceover-generation-visual-rendering-and-audio-mixing",
+      "featureTitle": "Build a video generation status dashboard that displays progress for Sora-based video rendering, including stages for script processing, voiceover generation, visual rendering, and audio mixing",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GenerationProgress.tsx",
+        "frontend/src/pages/GenerationStatusPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-video-project-library-where-users-can-view-all-their-created-projects-with-thumbnails-titles-duration-creation-date-and-status-draft-generating-completed",
+      "featureTitle": "Implement a video project library where users can view all their created projects with thumbnails, titles, duration, creation date, and status (draft, generating, completed)",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProjectCard.tsx",
+        "frontend/src/pages/ProjectsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-video-player-and-download-interface-for-completed-videos-showing-the-final-cinematic-output-with-all-integrated-elements-visuals-voiceover-sound-effects-music",
+      "featureTitle": "Create a video player and download interface for completed videos, showing the final cinematic output with all integrated elements (visuals, voiceover, sound effects, music)",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VideoPlayer.tsx",
+        "frontend/src/pages/VideoPlayerPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-cohesive-visual-theme-that-conveys-professional-cinematic-quality-with-a-modern-sophisticated-aesthetic-using-a-color-palette-of-deep-teals-warm-golds-and-charcoal-grays-typography-should-use-a-clean-sans-serif-for-ui-elements-paired-with-an-elegant-serif-for-headings-layouts-should-emphasize-spaciousness-and-clarity-with-card-based-designs-and-smooth-animations",
+      "featureTitle": "Design a cohesive visual theme that conveys professional cinematic quality with a modern, sophisticated aesthetic using a color palette of deep teals, warm golds, and charcoal grays; typography should use a clean sans-serif for UI elements paired with an elegant serif for headings; layouts should emphasize spaciousness and clarity with card-based designs and smooth animations",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

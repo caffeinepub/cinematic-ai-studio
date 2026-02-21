@@ -1,0 +1,219 @@
+{
+  "kind": "build_request",
+  "title": "Build AI video generation platform with script writing, voiceover, and music",
+  "projectName": "Cinematic AI Studio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a landing page that introduces the platform's capabilities: Sora-powered video generation, cinematic quality output up to 15 minutes, AI script writing, professional voiceover, sound effects, and music integration",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "Create a website for long ai video generation which includes, sora video version, cinemation, quality voiceover, script writing, sound effect, music , long 15 minutes cinemation video  creation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page displays all six core features clearly",
+        "Maximum video duration of 15 minutes is prominently mentioned",
+        "Visual hierarchy emphasizes cinematic quality and Sora technology"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a video project creation workflow where users can input their requirements: video concept, desired length (up to 15 minutes), style preferences, and target audience",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "long 15 minutes cinemation video  creation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form accepts project title and video concept description",
+        "Duration selector allows values from 30 seconds to 15 minutes",
+        "Style preferences include options like documentary, narrative, promotional, artistic",
+        "All project data is persisted to backend"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create an AI script writing interface where users can generate or refine video scripts with parameters for tone, pacing, and narrative structure",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "script writing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Script editor allows text input and editing",
+        "Users can specify tone (professional, casual, dramatic, etc.)",
+        "Generated scripts include scene descriptions and dialogue where applicable",
+        "Scripts are saved with the video project"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build a voiceover configuration module where users can select voice characteristics (gender, accent, tone) and generate professional-quality narration from the script",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "quality voiceover"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Voice selection interface with preview capabilities",
+        "Options for male/female voices with multiple accent choices",
+        "Tone controls (authoritative, warm, energetic, calm)",
+        "Voiceover preview before final generation",
+        "Generated voiceover files are linked to the project"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a sound effects library browser where users can search, preview, and select sound effects to enhance their video",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "sound effect"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Categorized sound effects library (nature, urban, technology, etc.)",
+        "Search and filter functionality",
+        "Audio preview player for each sound effect",
+        "Selected sound effects are associated with the project"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a music selection interface where users can browse background music tracks by mood, genre, and tempo, with options to customize music for their video length",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "music"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Music library categorized by mood (uplifting, dramatic, calm, epic)",
+        "Genre filters (orchestral, electronic, acoustic, ambient)",
+        "Tempo selection (slow, medium, fast)",
+        "Preview player for each track",
+        "Music selections are saved with the project"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build a video generation status dashboard that displays progress for Sora-based video rendering, including stages for script processing, voiceover generation, visual rendering, and audio mixing",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "sora video version",
+          "cinemation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Progress bar showing overall generation status",
+        "Individual stage indicators (script, visuals, voiceover, sound, music)",
+        "Estimated time remaining display",
+        "Status updates in real-time as generation proceeds"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement a video project library where users can view all their created projects with thumbnails, titles, duration, creation date, and status (draft, generating, completed)",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Grid or list view of all user projects",
+        "Each project card shows thumbnail, title, duration, and status badge",
+        "Ability to filter by status (all, draft, generating, completed)",
+        "Click on project navigates to project details"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a video player and download interface for completed videos, showing the final cinematic output with all integrated elements (visuals, voiceover, sound effects, music)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "long 15 minutes cinemation video  creation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Full-featured video player supporting playback controls",
+        "Display video metadata (duration, creation date, resolution)",
+        "Download button for completed videos",
+        "Option to share or export video"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Design a cohesive visual theme that conveys professional cinematic quality with a modern, sophisticated aesthetic using a color palette of deep teals, warm golds, and charcoal grays; typography should use a clean sans-serif for UI elements paired with an elegant serif for headings; layouts should emphasize spaciousness and clarity with card-based designs and smooth animations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color scheme applied consistently across all pages",
+        "Typography hierarchy is clear and readable",
+        "Animation transitions are smooth (300ms duration)",
+        "Card components use consistent styling with subtle shadows",
+        "Interface conveys premium, professional quality"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maximum video duration must be capped at 15 minutes",
+    "All generated content (scripts, voiceovers, videos) must be stored and retrievable",
+    "Video generation process must provide clear progress feedback to users"
+  ],
+  "nonGoals": [
+    "Real-time collaborative editing of video projects",
+    "Integration with external video hosting platforms",
+    "Mobile app development",
+    "Live streaming capabilities",
+    "Social media direct posting"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cinematic hero banner showing abstract film strips and creative elements in deep teal and gold tones (hero-banner.dim_1920x600.png)",
+      "Icon representing AI script writing with quill and circuit motif (script-icon.dim_128x128.png)",
+      "Icon representing professional voiceover with microphone and sound wave design (voiceover-icon.dim_128x128.png)",
+      "Icon representing sound effects with speaker and audio waveforms (sound-icon.dim_128x128.png)",
+      "Icon representing music with musical note and equalizer bars (music-icon.dim_128x128.png)",
+      "Icon representing video generation with play button and film reel (video-icon.dim_128x128.png)",
+      "Placeholder thumbnail for video projects showing generic cinematic frame (project-thumb.dim_320x180.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Cinematic AI Studio - Frontend Implementation Plan",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a landing page that introduces the platform's capabilities: Sora-powered video generation, cinematic quality output up to 15 minutes, AI script writing, professional voiceover, sound effects, and music integration",
+      "acceptanceCriteria": [
+        "Landing page displays all six core features clearly",
+        "Maximum video duration of 15 minutes is prominently mentioned",
+        "Visual hierarchy emphasizes cinematic quality and Sora technology"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create landing page component with hero section using generated hero-banner.dim_1920x600.png from frontend/public/assets/generated/, feature showcase grid displaying all six capabilities (AI script writing, professional voiceover, sound effects, music integration, Sora video generation, cinematic quality) with corresponding icons (script-icon.dim_128x128.png, voiceover-icon.dim_128x128.png, sound-icon.dim_128x128.png, music-icon.dim_128x128.png, video-icon.dim_128x128.png), prominent call-to-action button, and emphasis on 15-minute maximum duration capability"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for LandingPage at '/' path and ensure it's accessible to all users including guests"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a video project creation workflow where users can input their requirements: video concept, desired length (up to 15 minutes), style preferences, and target audience",
+      "acceptanceCriteria": [
+        "Form accepts project title and video concept description",
+        "Duration selector allows values from 30 seconds to 15 minutes",
+        "Style preferences include options like documentary, narrative, promotional, artistic",
+        "All project data is persisted to backend"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CreateProjectPage.tsx",
+          "operation": "create",
+          "description": "Create project creation form page with controlled inputs for title (text), concept (textarea), duration selector (30s to 15min in 30s increments), style preferences (select: documentary, narrative, promotional, artistic), and target audience (text). Use the authorization component to ensure only authenticated users can access. Submit form data via createVideoProject backend method and navigate to project details on success"
+        },
+        {
+          "path": "frontend/src/hooks/useCreateProject.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook for createVideoProject backend method with form validation, loading states, and error handling"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for CreateProjectPage at '/create' and ensure it requires authentication using authorization component guards"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create an AI script writing interface where users can generate or refine video scripts with parameters for tone, pacing, and narrative structure",
+      "acceptanceCriteria": [
+        "Script editor allows text input and editing",
+        "Users can specify tone (professional, casual, dramatic, etc.)",
+        "Generated scripts include scene descriptions and dialogue where applicable",
+        "Scripts are saved with the video project"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ScriptEditor.tsx",
+          "operation": "create",
+          "description": "Create script editor component with textarea for script content, tone selector (professional, casual, dramatic, inspiring, educational), pacing controls (slow, medium, fast), narrative structure options (linear, non-linear, episodic), generate button to trigger AI script generation, and save functionality. Component receives projectId prop and displays loading states during generation"
+        },
+        {
+          "path": "frontend/src/pages/ScriptEditorPage.tsx",
+          "operation": "create",
+          "description": "Create page wrapper for ScriptEditor component that fetches project details using getProject backend method and passes projectId from route params. Use authorization component to ensure only authenticated users can access"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for ScriptEditorPage at '/project/:id/script' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build a voiceover configuration module where users can select voice characteristics (gender, accent, tone) and generate professional-quality narration from the script",
+      "acceptanceCriteria": [
+        "Voice selection interface with preview capabilities",
+        "Options for male/female voices with multiple accent choices",
+        "Tone controls (authoritative, warm, energetic, calm)",
+        "Voiceover preview before final generation",
+        "Generated voiceover files are linked to the project"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VoiceoverConfig.tsx",
+          "operation": "create",
+          "description": "Create voiceover configuration component with gender selector (male, female, neutral), accent options (American, British, Australian, Indian, etc.), tone controls (authoritative, warm, energetic, calm, conversational), preview button with audio player, generate button, and display of generated voiceover status. Component receives projectId and script content as props"
+        },
+        {
+          "path": "frontend/src/pages/VoiceoverPage.tsx",
+          "operation": "create",
+          "description": "Create page wrapper for VoiceoverConfig component that fetches project data and passes necessary props. Use authorization component to ensure only authenticated users can access"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for VoiceoverPage at '/project/:id/voiceover' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement a sound effects library browser where users can search, preview, and select sound effects to enhance their video",
+      "acceptanceCriteria": [
+        "Categorized sound effects library (nature, urban, technology, etc.)",
+        "Search and filter functionality",
+        "Audio preview player for each sound effect",
+        "Selected sound effects are associated with the project"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SoundEffectsLibrary.tsx",
+          "operation": "create",
+          "description": "Create sound effects browser component with category filters (nature, urban, technology, human, ambient, cinematic), search input, grid of sound effect cards each with preview button and audio player, selection checkboxes, and save selections button. Component receives projectId prop and displays loading/empty states"
+        },
+        {
+          "path": "frontend/src/pages/SoundEffectsPage.tsx",
+          "operation": "create",
+          "description": "Create page wrapper for SoundEffectsLibrary component with project context. Use authorization component to ensure only authenticated users can access"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for SoundEffectsPage at '/project/:id/sound-effects' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create a music selection interface where users can browse background music tracks by mood, genre, and tempo, with options to customize music for their video length",
+      "acceptanceCriteria": [
+        "Music library categorized by mood (uplifting, dramatic, calm, epic)",
+        "Genre filters (orchestral, electronic, acoustic, ambient)",
+        "Tempo selection (slow, medium, fast)",
+        "Preview player for each track",
+        "Music selections are saved with the project"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MusicLibrary.tsx",
+          "operation": "create",
+          "description": "Create music library component with mood filters (uplifting, dramatic, calm, epic, mysterious, romantic), genre filters (orchestral, electronic, acoustic, ambient, cinematic, corporate), tempo selector (slow, medium, fast), grid of music track cards with preview audio players, selection radio buttons (single selection), and save selection button. Component receives projectId and video duration props"
+        },
+        {
+          "path": "frontend/src/pages/MusicSelectionPage.tsx",
+          "operation": "create",
+          "description": "Create page wrapper for MusicLibrary component that fetches project details and passes duration. Use authorization component to ensure only authenticated users can access"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for MusicSelectionPage at '/project/:id/music' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build a video generation status dashboard that displays progress for Sora-based video rendering, including stages for script processing, voiceover generation, visual rendering, and audio mixing",
+      "acceptanceCriteria": [
+        "Progress bar showing overall generation status",
+        "Individual stage indicators (script, visuals, voiceover, sound, music)",
+        "Estimated time remaining display",
+        "Status updates in real-time as generation proceeds"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GenerationProgress.tsx",
+          "operation": "create",
+          "description": "Create generation progress component with overall progress bar (0-100%), individual stage cards showing status (pending, in-progress, completed) for script processing, visual rendering (Sora), voiceover generation, sound effects integration, and audio mixing, estimated time remaining display, and auto-refresh via polling of getProject backend method. Component receives projectId prop"
+        },
+        {
+          "path": "frontend/src/pages/GenerationStatusPage.tsx",
+          "operation": "create",
+          "description": "Create page wrapper for GenerationProgress component with real-time updates. Use authorization component to ensure only authenticated users can access. Navigate to video player page when status becomes 'completed'"
+        },
+        {
+          "path": "frontend/src/hooks/useProjectStatus.ts",
+          "operation": "create",
+          "description": "Create React Query hook with polling enabled to fetch project status via getProject backend method every 5 seconds when project status is 'generating'"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for GenerationStatusPage at '/project/:id/status' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement a video project library where users can view all their created projects with thumbnails, titles, duration, creation date, and status (draft, generating, completed)",
+      "acceptanceCriteria": [
+        "Grid or list view of all user projects",
+        "Each project card shows thumbnail, title, duration, and status badge",
+        "Ability to filter by status (all, draft, generating, completed)",
+        "Click on project navigates to project details"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProjectsPage.tsx",
+          "operation": "create",
+          "description": "Create projects library page with filter tabs (all, draft, generating, completed), grid of project cards displaying thumbnail (use project-thumb.dim_320x180.png from frontend/public/assets/generated/ as placeholder when project has no thumbnail), title, duration formatted as 'Xm Ys', creation date, and status badge with color coding. Use authorization component to ensure only authenticated users can access. Fetch projects using getAllProjects backend method. Cards are clickable and navigate to project detail page"
+        },
+        {
+          "path": "frontend/src/components/ProjectCard.tsx",
+          "operation": "create",
+          "description": "Create reusable project card component displaying thumbnail image, title, duration, creation date, and status badge. Receives project object as prop and onClick handler for navigation"
+        },
+        {
+          "path": "frontend/src/hooks/useProjects.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch all projects via getAllProjects backend method with caching and refetch strategies"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for ProjectsPage at '/projects' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create a video player and download interface for completed videos, showing the final cinematic output with all integrated elements (visuals, voiceover, sound effects, music)",
+      "acceptanceCriteria": [
+        "Full-featured video player supporting playback controls",
+        "Display video metadata (duration, creation date, resolution)",
+        "Download button for completed videos",
+        "Option to share or export video"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/VideoPlayerPage.tsx",
+          "operation": "create",
+          "description": "Create video player page with HTML5 video player with controls, metadata display section showing duration, creation date, resolution, and processing details, download button, share button with copy-to-clipboard functionality. Fetch project details via getProject backend method. Use authorization component to ensure only authenticated users can access. Show message if video is not yet completed"
+        },
+        {
+          "path": "frontend/src/components/VideoPlayer.tsx",
+          "operation": "create",
+          "description": "Create video player component with responsive video element, custom controls (play/pause, seek, volume, fullscreen), and metadata overlay. Receives video URL and metadata as props"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for VideoPlayerPage at '/project/:id/video' with authentication guard from authorization component"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Design a cohesive visual theme that conveys professional cinematic quality with a modern, sophisticated aesthetic using a color palette of deep teals, warm golds, and charcoal grays; typography should use a clean sans-serif for UI elements paired with an elegant serif for headings; layouts should emphasize spaciousness and clarity with card-based designs and smooth animations",
+      "acceptanceCriteria": [
+        "Color scheme applied consistently across all pages",
+        "Typography hierarchy is clear and readable",
+        "Animation transitions are smooth (300ms duration)",
+        "Card components use consistent styling with subtle shadows",
+        "Interface conveys premium, professional quality"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles with custom CSS variables for color palette (--color-teal-deep, --color-gold-warm, --color-gray-charcoal, and their variants), typography scale using system font stack for body and serif for headings, transition timing (300ms), and base card styling with subtle shadows"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom color palette (deep teals: #0A4D4D, #0D6666, #108080; warm golds: #D4AF37, #E6C24A, #F2D55C; charcoal grays: #2C2C2C, #3F3F3F, #525252), custom font families (sans: Inter/system, serif: Playfair Display/Georgia), custom transition durations (300ms default), and custom shadow utilities for cards"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout wrapper component with navigation header (logo, menu links to projects/create, login/logout button using authorization component), main content area with proper spacing, and footer. Apply consistent padding, background colors from theme, and ensure responsive design"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with Layout component to ensure consistent visual theme across all pages"
+        }
+      ]
+    }
+  ]
+}
